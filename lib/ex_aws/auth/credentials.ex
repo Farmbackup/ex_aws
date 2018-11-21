@@ -8,6 +8,10 @@ defmodule ExAws.Auth.Credentials do
     "#{config[:access_key_id]}/#{scope}"
   end
 
+  def generate_credential_scope_v4(service, config, datetime) when service == :pinpoint or service == "pinpoint" do
+    "#{date(datetime)}/#{config[:region]}/mobiletargeting/aws4_request"
+  end
+
   def generate_credential_scope_v4(service, config, datetime) do
     "#{date(datetime)}/#{config[:region]}/#{service}/aws4_request"
   end
