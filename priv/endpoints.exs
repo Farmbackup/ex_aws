@@ -115,7 +115,7 @@
         },
         "pinpoint" => %{
           "defaults" => %{"credentialScope" => %{"service" => "mobiletargeting"}},
-          "endpoints" => %{"us-east-1" => %{}}
+          "endpoints" => %{"us-east-1" => %{}, "eu-west-1" => %{}}
         },
         "iam" => %{
           "endpoints" => %{
